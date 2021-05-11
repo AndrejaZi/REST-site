@@ -6,12 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shikos-Andros website</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h3>Hello there</h3>
-        <h2>General Kenobi</h2>
-        
+        <nav class="navigation">
+            <div class="navigation-container">
+                <div class="nav-logo">
+                    <img class="logo-pic" src="img/logo_white.png"></img>
+                    <p class="logo-text">Kompanija</p>
+                </div>
+                <div class="nav-elem">
+                    <ul>
+                        <li><a href="#">kategorije</a></li>
+                        <li><a href="#">svi proizvodi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="separator"></div>
+                <!-- separator is only to keep navigation in order -->
+    
+                <div class="nav-search">
+                    <img src="img/search_white.png" alt="search image">
+                    <input type="text" placeholder="Pretraži">
+                </div>
+                <div class="nav-user">
+                    <img src="img/user_white.png" alt="user account">
+                </div>
+            </div>
+            
+            
+            
+        </nav>
+        <div class="content">
+            <div class="content-left">
+                <div class="image"></div>
+                <button class="left-button">Kupovina</button>
+            </div>
+            <div class="content-right">
+                <p class="right-text">Vaše rešenje <br> za dobro poslovanje</p>
+            </div>
+        </div>
+        <footer>
+            <p>footer</p>
+        </footer>
     </div>
     <script src="script/app.js"></script>
 </body>
