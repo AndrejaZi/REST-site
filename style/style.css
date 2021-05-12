@@ -16,7 +16,7 @@ html{
 /* ENTIRE PAGE */
 .container{
     display: grid;
-    grid-template-rows:90px calc(100vh - 90px) 130px ;
+    grid-template-rows:70px calc(100vh - 70px) 100px ;
     margin: 0 auto;
     /* text-align: center; */
 }
@@ -31,7 +31,7 @@ html{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 20% 30% 1fr 15% 13%;
-    grid-template-rows: 90px;
+    grid-template-rows: 70px;
     align-items: center;
 }
 
@@ -41,12 +41,12 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fff;
 }
 /* IMAGE IN LOGO DIV */
 .navigation-container .nav-logo img{
-    width: 60px;
+    width: 40px;
 }
 
 
@@ -60,16 +60,16 @@ html{
     padding: 20px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 /* SEARCH BOX */
 .navigation-container .nav-search img{
-    width: 40px;
+    width: 25px;
 }
 .navigation-container .nav-search input{
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1em;
     border: none;
     color: #fff;
     text-indent: 10px;
@@ -78,7 +78,7 @@ html{
 .navigation-container .nav-search{
     display: flex;
     width: 100%;
-    height: 60px;
+    height: 40px;
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 30px;
@@ -89,8 +89,8 @@ html{
     text-align: center;
 }
 .navigation-container .nav-user img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 /* PAGE BODY */
@@ -105,11 +105,15 @@ html{
     background-color: var(--main-content-left-color);
     display: grid;
     grid-template-rows: 80% 10%;
+    justify-content: center;
+    align-content: center;
 }
 .content .content-left img, .content .content-left button{
-    width: 90%;
+    width: 80%;
     height: 70%;
-    margin-left: 5%;
+    margin: 0 auto;
+    /* margin-left: 10%; */
+    
 }
 .content .content-left button{
     background-color: transparent;
@@ -126,7 +130,7 @@ html{
     border-bottom-left-radius: 550px;
 }
 .content .content-right p{
-    font-size: 2.5em;
+    font-size: 2em;
     color: #fff;
     font-weight: 500;
     text-align: center;
@@ -139,17 +143,17 @@ footer{
     background-color: #ecf0f1;
     position: relative;
     bottom: 0;
-    padding: 30px;
+    padding: 10px;
 }
 .footer-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .footer-container .footer-logo img{
-    width: 60px;
+    width: 30px;
 }
 .footer-container .footer-logo p{
-    font-size: 2rem;
+    font-size: 1.5em;
 }
 .footer-container .footer-logo, .footer-container .footer-autor, .footer-navigation ul li{
     display: flex;
