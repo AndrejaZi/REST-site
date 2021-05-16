@@ -5,20 +5,27 @@ setTimeout(()=> {
     addCats(10);
 }, 1420);
 
-
+document.querySelector('.nav-logo').addEventListener('click', function() {
+    document.location.href = 'index.php';
+});
+document.querySelector('.nav-logo').addEventListener('mouseenter', function() {
+    document.body.style.cursor = 'pointer';
+});
+document.querySelector('.nav-logo').addEventListener('mouseleave', function() {
+    document.body.style.cursor = 'default';
+});
 
 async function myFunc(){
-    // const options = {
-    //     method: 'POST',
-    //     mode: "no-cors",
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // }
-    // //https://ptsv2.com/t/andreja/post
-    // fetch('https://ptsv2.com/t/andreja/post', options)
-    // .then(response => response.json())
-    // .then(data => console.log(data));
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    //https://ptsv2.com/t/andreja/post
+    fetch('https://ptsv2.com/t/andreja/post', options)
+    .then(response => response.json())
+    .then(data => console.log(data));
 }
 
 

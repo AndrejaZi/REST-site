@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet"> -->
 </head>
 <body>
-    <div class="container">
+    <div class="category-container">
         <nav class="navigation">
             <div class="navigation-container">
                 <div class="nav-logo">

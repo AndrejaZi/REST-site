@@ -38,7 +38,7 @@
                 </div>
             </div>
         </nav>
-        <!-- <div><button onclick="myFunc()">Klikni me</button></div> -->
+        <div><button onclick="myFunc()">Klikni me</button></div>
         <div class="content">
             <div class="content-left">
                 <img src="img/main-body-pic.svg" class="image"></img>

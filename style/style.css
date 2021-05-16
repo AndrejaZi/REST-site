@@ -19,6 +19,12 @@
 }
 html{
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 /* ######################### */
@@ -159,8 +165,7 @@ html{
 /* FOOTER */
 footer{
     background-color: var(--footer-back-color);
-    position: relative;
-    bottom: 0;
+    margin-top: auto;
     padding: 10px;
 }
 .footer-container{
@@ -199,16 +204,22 @@ footer{
 /* ##################### */
 /* #### Categories ##### */
 /* ##################### */
-
+.category-container{
+    display: flex;
+    flex-direction: column;
+    
+}
 .main-category{
-    padding-top: 7%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     display: flex;
     flex-wrap: wrap;
     row-gap: 2rem;
     column-gap: 1.5rem;
     justify-content: space-around;
     width: 80%;
-    height: 100vh;
+    min-height: 150%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -216,6 +227,7 @@ footer{
 .category-element{
     height: 200px;
     width: 20%;
+    max-width: 200px;
     background-color: #ecf0f1;
     border-radius: 15px;
     margin:10px;
