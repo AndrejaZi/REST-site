@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shikos-Andros website</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <div class="container">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="nav-elem">
                     <ul>
-                        <li><a href="#">kategorije</a></li>
+                        <li><a href="kategorije.php">kategorije</a></li>
                         <li><a href="#">svi proizvodi</a></li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </nav>
-        <div><button onclick="myFunc()">Klikni me</button></div>
+        <!-- <div><button onclick="myFunc()">Klikni me</button></div> -->
         <div class="content">
             <div class="content-left">
                 <img src="img/main-body-pic.svg" class="image"></img>

@@ -1,7 +1,15 @@
+/* ################## */
+/* #### globals ##### */
+/* ################## */
+
 :root{
     --navigation-color:#19242E;
     --main-content-left-color: #3498DB;
     --main-content-right-color: #19242E;
+    --footer-back-color: #ecf0f1;
+    --placeholder-cat-color: #c0c0c0;
+    --placeholder-img-color: #dadada;
+    --placeholder-title-color: #dadada;
 }
 
 *{
@@ -12,6 +20,16 @@
 html{
     font-family: 'Montserrat', sans-serif;
 }
+
+/* ######################### */
+/* #### end of globals ##### */
+/* ######################### */
+
+
+
+/* #################### */
+/* #### main page ##### */
+/* #################### */
 
 /* ENTIRE PAGE */
 .container{
@@ -140,7 +158,7 @@ html{
 
 /* FOOTER */
 footer{
-    background-color: #ecf0f1;
+    background-color: var(--footer-back-color);
     position: relative;
     bottom: 0;
     padding: 10px;
@@ -169,4 +187,75 @@ footer{
 }
 .footer-container .footer-autor{
     justify-content: center;
+}
+/* ########################### */
+/* #### end of main page ##### */
+/* ########################### */
+
+
+
+
+
+/* ##################### */
+/* #### Categories ##### */
+/* ##################### */
+
+.main-category{
+    padding-top: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 1.5rem;
+    justify-content: space-around;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* dynamic div when api data is loaded*/
+.category-element{
+    height: 200px;
+    width: 20%;
+    background-color: #ecf0f1;
+    border-radius: 15px;
+    margin:10px;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+.category-element:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* placeholder elements that are present until data is loaded from api */
+.placeholder-cat, .placeholder-img, .placeholder-title{
+    display: block;
+    content: ' ';
+}
+/* main placeholder div */
+.placeholder-cat{
+    height: 200px;
+    width: 200px;
+    background-color:var(--placeholder-cat-color);
+    border-radius: 20px;
+    padding: 10px;
+}
+/* placeholder image */
+.placeholder-img{
+    background-color: var(--placeholder-img-color);
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/* placeholder title */
+.placeholder-title{
+    background-color: var(--placeholder-title-color);
+    height: 20%;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
