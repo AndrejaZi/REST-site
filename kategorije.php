@@ -1,4 +1,9 @@
+<?php
+    require "php/getCategories.php";
 
+    $cats = getCategories();
+    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,14 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shikos-Andros website</title>
     <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="category-container">
         <nav class="navigation">
             <div class="navigation-container">
-                <div class="nav-logo">
+                <div class="nav-logo">  
                     <img class="logo-pic" src="img/logo_white.png"></img>
                     <p class="logo-text">Kompanija</p>
                 </div>
@@ -39,7 +44,14 @@
             </div>
         </nav>
         <div class="main-category">
-            
+           <?php
+            foreach($cats as $cat){
+                echo "<div class='category-element'>
+                        <img class='category-img' src='img/sale-test.jpg'></img>
+                        <p class='category-title'>" . $cat["klasa"] . "</p>
+                      </div>";
+            }
+           ?> 
         </div>
         <footer>
             <div class="footer-container">
@@ -59,6 +71,7 @@
             </div>
         </footer>
     </div>
+    <script src="https://use.fontawesome.com/154b372a46.js"></script>
     <script src="script/app.js"></script>
 </body>
 </html>
