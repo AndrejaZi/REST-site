@@ -54,7 +54,7 @@ body{
 .navigation-container{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 20% 30% 1fr 15% 7% 7%;
+    grid-template-columns: 20% 30% 1fr 15% 14%;
     grid-template-rows: 70px;
     align-items: center;
 }
@@ -169,8 +169,10 @@ footer{
     padding: 10px;
 }
 .footer-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* width: 90%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .footer-container .footer-logo img{
     width: 30px;
@@ -228,6 +230,7 @@ footer{
     height: 200px;
     width: 20%;
     max-width: 200px;
+    min-width: 200px;
     background-color: #ecf0f1;
     border-radius: 15px;
     margin:10px;
