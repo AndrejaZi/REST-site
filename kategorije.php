@@ -1,7 +1,18 @@
 <?php
-    require "php/getCategories.php";
+    try{
+        function myFunc(){
+            echo "asdasdsadasdsad";
+        }
+        require "php/getCategories.php";
 
-    $cats = getCategories();
+        $cats = getCategories();
+    }
+    catch(exception $exc){
+        echo "";
+    }
+    
+
+    
     
 ?>
 
@@ -27,7 +38,6 @@
                 <div class="nav-elem">
                     <ul>
                         <li><a href="#">kategorije</a></li>
-                        <li><a href="#">svi proizvodi</a></li>
                     </ul>
                 </div>
                 
@@ -45,12 +55,25 @@
         </nav>
         <div class="main-category">
            <?php
+           
+           if(isset($cats)){
             foreach($cats as $cat){
                 echo "<div class='category-element'>
-                        <img class='category-img' src='img/sale-test.jpg'></img>
-                        <p class='category-title'>" . $cat["klasa"] . "</p>
+                        <a>
+                            <p id=".$cat["sifra"] ." style = 'display:none'> " .$cat["sifra"] . " </p>
+                            <img id=".$cat["sifra"] ." class='category-img' src='img/sale-test.jpg'></img>
+                            <p id=".$cat["sifra"] ." class='category-title'>" . $cat["klasa"] . "</p>
+                        </a>
+                        
+                      </div>";
+                }
+            }else{
+                echo "<div class='no-data'>
+                            <img src='img/notify.svg' alt='no data found'></img>
+                            <p class='no-data-text'>Podaci nisu pronađeni, molimo pokušajte ponovo</p>
                       </div>";
             }
+            
            ?> 
         </div>
         <footer>
@@ -73,5 +96,6 @@
     </div>
     <script src="https://use.fontawesome.com/154b372a46.js"></script>
     <script src="script/app.js"></script>
+    
 </body>
 </html>

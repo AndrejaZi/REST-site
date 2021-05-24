@@ -1,25 +1,24 @@
 <?php
 
 function getCategories(){
-    $url = 'http://zutiws.dis.rs/serpod/SerPodM.dll/onl_liskat';
-    $data = array('key1' => 'val1', 'key2' => 'val2');
-    $options = array(
-        'http' => array(
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
-            'content' => http_build_query($data)
-        )
-    );
-    $context  = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
-    if ($response === FALSE) 
-    { /* Handle error */ 
+    $curl = curl_init();
+    $url = "http://zutiws.dis.rs/serpod/SerPodM.dll/onl_liskat";
 
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+
+    $resp = curl_exec($curl);
+
+    if($error = curl_error($curl)){
+        echo "Error" . $error;
+        curl_close($curl);
+    }else{
+        $decoded = json_decode($resp, true);
+        curl_close($curl);
+        return $decoded;
     }
-    $json_array=json_decode($response,true); 
     
-    return $json_array;
-    //var_dump($json_array);
 }
     
 ?>

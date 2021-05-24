@@ -1,3 +1,9 @@
+<?php
+function myFunc(){
+    echo "Hello";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,6 @@
                 <div class="nav-elem">
                     <ul>
                         <li><a href="kategorije.php">kategorije</a></li>
-                        <li><a href="#">svi proizvodi</a></li>
                     </ul>
                 </div>
                 
